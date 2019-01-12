@@ -14,10 +14,10 @@ function handleFilter(entry) {
             cell.text(value);
         })
     })
-}
+};
 
 //Load table onto website
-//handleFilter(tableData);
+handleFilter(tableData);
 
 
 //Select the filter table button
@@ -28,6 +28,10 @@ submit.on("click", function() {
     
     //Prevent Refresh
     d3.event.preventDefault(); 
+
+    //Clear Old Table
+    tablebody.html("")
+
 
     //Select input element and get value property of input element
     var inputValue = d3.select("#datetime").property("value");
